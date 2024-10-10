@@ -1,0 +1,14 @@
+services:
+  mongodb:
+    image: mongodb/mongodb-atlas-local
+    
+    environment:
+      - MONGODB_INITDB_ROOT_USERNAME=user
+      - MONGODB_INITDB_ROOT_PASSWORD=pass
+    ports:
+      - 27017:27017
+    volumes:
+      - data:/data/db
+      
+volumes:
+  data:
